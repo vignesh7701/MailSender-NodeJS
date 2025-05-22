@@ -23,8 +23,8 @@ module.exports = function getWelcomeEmailTemplate() {
       margin: 0 auto;
       padding: 20px;
       background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 8px; 
+      border: 1px solid #0000; 
     }
     .header {
       text-align: center;
@@ -35,20 +35,16 @@ module.exports = function getWelcomeEmailTemplate() {
     }
     .nav-bar {
       display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      font-size: 16px;  
-      padding: 0;
+      justify-content: between;
+      width: 100%; 
       list-style: none;
-      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      align-items: center;
     }
-    .nav-links a {
+    .nav-bar a {
       text-decoration: none;
       color: #000000;
       font-weight: medium;
@@ -80,7 +76,6 @@ module.exports = function getWelcomeEmailTemplate() {
       margin: 0 auto;
     }
     .footer {
-    
       font-size: 12px;
       color: #777;
       text-align: center;
@@ -123,17 +118,13 @@ module.exports = function getWelcomeEmailTemplate() {
   <div class="container">
     <div class="header">
       <img src="https://ecommstorageaccount1.blob.core.windows.net/container1/logo1.png" alt="Best in Gems" class="logo">
-      <div class="nav-bar">
-      <ul class="nav-links">
-        <li><a href="https://bestingems.com">Gemstones</a></li>
-        <li><a href="https://bestingems.com/about">Jewelry</a></li>
-        <li><a href="https://bestingems.com/contact">Semi-Mounts</a></li>
-        <li><a href="https://bestingems.com/shop">Drops & Beads</a></li>
-      </ul>
+      <div class="nav-bar"> 
+          <a href="https://bestingems.com">Gemstones</a> 
+          <a href="https://bestingems.com/about">Jewelry</a> 
+          <a href="https://bestingems.com/contact">Semi-Mounts</a> 
+          <a href="https://bestingems.com/shop">Drops & Beads</a>  
       </div>
-    </div>
-
-    <div class="divider"></div>
+    </div> 
 
     <div class="section"> 
       <img src="https://ecommstorageaccount1.blob.core.windows.net/container1/WhatsApp%20Image%202025-05-22%20at%2016.01.28_9faadd1c.jpg" alt="Welcome" class="email-image">
@@ -182,8 +173,7 @@ module.exports = function getWelcomeEmailTemplate() {
 
     <div class="footer">
       <p>&copy; ${new Date().getFullYear()} BestinGems. All rights reserved.</p>
-      <p>
-        <a href="#" style="color: #777; text-decoration: none;">Unsubscribe</a> | 
+      <p> 
         <a href="#" style="color: #777; text-decoration: none;">Privacy Policy</a>
       </p>
     </div>
