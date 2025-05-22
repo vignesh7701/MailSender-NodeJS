@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Send Email</title>
+  </head>
+  <body>
+    <h2>Send Test Mail</h2>
+    <button onclick="sendMail()">Send Mail</button>
+
+    <script>
+      async function sendMail() { 
+        const res = await fetch("http://localhost:3000/send-mail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            type: "welcome", 
+          }),
+        });
+
+        const data = await res.json();
+        alert("Mail Sent");
+      }
+    </script>
+  </body>
+</html>
