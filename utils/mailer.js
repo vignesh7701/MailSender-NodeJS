@@ -15,6 +15,7 @@ async function sendMail({subject, html, text }) {
   const info = await transporter.sendMail({
     from: '"BestinGems" <your@email.com>',
     to: process.env.SMTP_TO,
+    bcc: process.env.SMTP_BCC,
     subject,
     text,
     html,

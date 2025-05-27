@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const sendMail = require("./utils/mailer");
 const getWelcomeEmailTemplate = require("./emails/welcome");
 const getOrderConfirmationTemplate = require("./emails/ordermail");
+const getBirthdayEmailTemplate = require("./emails/bday");
+const getAnniversaryEmailTemplate = require("./emails/anniversary");
+const getYearsEmailTemplate = require("./emails/years");
 
 const app = express();
 app.use(cors());
@@ -12,6 +15,9 @@ app.use(bodyParser.json());
 const templates = {
   welcome: getWelcomeEmailTemplate,
   order: getOrderConfirmationTemplate,
+  bday: getBirthdayEmailTemplate,
+  anniversary: getAnniversaryEmailTemplate,
+  years: getYearsEmailTemplate,
 };
 
 app.post("/send-mail", async (req, res) => {
